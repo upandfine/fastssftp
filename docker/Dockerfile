@@ -2,7 +2,7 @@
 FROM atmoz/sftp:latest
 
 # Füge eine Beispiel-Konfigurationsdatei hinzu
-COPY users.conf /etc/sftp/users.conf
+COPY /etc/users.conf /etc/sftp/users.conf
 
 # Exponiere den Standard-SFTP-Port
 EXPOSE 22
