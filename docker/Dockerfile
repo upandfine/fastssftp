@@ -7,8 +7,9 @@ COPY /etc/users.conf /etc/sftp/users.conf
 # Exponiere den Standard-SFTP-Port
 EXPOSE 22
 
-# Füge das Docker-Entry-Point-Skript hinzu
+
+# Setze den EntryPoint auf das Standard-Entrypoint des Basisimages
 ENTRYPOINT ["/entrypoint"]
 
-# Führe das SFTP-Daemon aus
-CMD ["-D"]
+# Führe den SSH-Daemon im Vordergrund aus
+CMD ["-D", "SSH"]
