@@ -12,4 +12,5 @@ EXPOSE 22
 ENTRYPOINT ["/entrypoint"]
 
 # Führe den SSH-Daemon im Vordergrund aus
-CMD ["sshd", "-D"]
+CMD ["/usr/sbin/sshd", "-D"]
+
